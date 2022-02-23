@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/employee_database</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">pass</property>
+    <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+
+    <mapping class="by.tms.entity.Employee"/>
+    <mapping class="by.tms.entity.Organization"/>
+    <mapping class="by.tms.entity.Payment"/>
+  </session-factory>
+</hibernate-configuration>
